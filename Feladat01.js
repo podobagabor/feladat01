@@ -1,19 +1,20 @@
 
 //feladat01.js
 
-function feladat01(szinek) {
+function feladat01(colors) {
     let n = 1
-    let faktors = []
+    let factors = []
     let numOfCombinations = 0
-    faktors[0] = 1
-    for (i = 1; i <= szinek.length; i++) {
+    factors[0] = 1
+    for (i = 1; i <= colors.length; i++) {
         n = n * i
-        faktors[i] = n
+        factors[i] = n
     }
-    for (i = 2; i <= szinek.length; i++) {
-        numOfCombinations = numOfCombinations + ((faktors[szinek.length]) / ((faktors[i]) * (faktors[(szinek.length - i)])))
+    for (i = 2; i <= colors.length; i++) {
+        numOfCombinations = numOfCombinations + (factors[colors.length] / (factors[i] * factors[(colors.length - i)]))
     }
     return numOfCombinations
 }
+
 
 
